@@ -9,8 +9,9 @@ import time
 import tkinter
 from tkinter import messagebox
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-recognizer.read('../trainer/trainer.yml')
-faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml");
+recognizer.read('./trainer/trainer.yml')
+faceCascade = cv2.CascadeClassifier(
+    cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 counter_correct = 0  # counter variable to count number of times loop runs
 counter_wrong = 0
@@ -54,7 +55,6 @@ while True:
 
         id, confidence = recognizer.predict(gray[y:y+h, x:x+w])
 
-        
         if(confidence > 80):  # confidence usually comes greater than 80 for strangers
             counter_wrong += 1
             print("Wrong")
