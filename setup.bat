@@ -27,5 +27,4 @@ pip install -r requirements.txt
 python 01_face_dataset.py 
 python 02_face_training.py
 schtasks /Create /RU %USERNAME% /SC ONEVENT /MO "*[System[(EventID=42)]]" /EC System /TN "facelock" /TR "%CD%/trigger.lnk" /F
-REM schtasks /create /tn "FaceUnlock" /tr "%CD%/trigger.bat" /sc onlogon [/it] [/ru %USERNAME% [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 pause
