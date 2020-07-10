@@ -9,7 +9,7 @@ import time
 import tkinter
 from tkinter import messagebox
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-recognizer.read('./trainer/trainer.yml')
+recognizer.read('trainer/trainer.yml')
 faceCascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
